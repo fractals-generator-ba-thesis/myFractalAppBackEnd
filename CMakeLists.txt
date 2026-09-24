@@ -11,7 +11,13 @@ set(OpenMP_omp_LIBRARY /opt/homebrew/opt/libomp/lib/libomp.dylib)
 
 find_package(OpenMP REQUIRED)
 
-add_executable(server main.cpp)
+add_executable(server main.cpp
+        src/color.h
+        src/mandelbrot.h
+        src/julia.h
+        src/tile.h
+        src/render.h
+        src/barnsley.h)
 
 target_include_directories(server PRIVATE
         include
